@@ -1,0 +1,83 @@
+/* ===== ROOT CONTAINER ===== */
+#root {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ===== CARD BASE ===== */
+.card {
+  padding: 1em;
+  background: linear-gradient(
+    145deg,
+    rgba(30, 41, 59, 0.95),
+    rgba(15, 23, 42, 0.98)
+  );
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== LOADING SPINNER ===== */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(0, 212, 255, 0.2);
+  border-top-color: #00d4ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== RESPONSIVE - Tablets ===== */
+@media screen and (min-width: 768px) {
+  #root {
+    padding: 0 15px;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+}
+
+/* ===== RESPONSIVE - Desktop ===== */
+@media screen and (min-width: 1024px) {
+  #root {
+    padding: 0 25px;
+  }
+
+  .card {
+    padding: 2em;
+  }
+}
+
+/* ===== RESPONSIVE - Large Desktop ===== */
+@media screen and (min-width: 1400px) {
+  #root {
+    padding: 0 30px;
+  }
+}

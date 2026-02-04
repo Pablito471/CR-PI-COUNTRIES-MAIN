@@ -1,0 +1,75 @@
+/* ===== FOOTER ===== */
+footer {
+  color: #94a3b8;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  padding: 20px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(30, 41, 59, 0.9)
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  font-size: 0.85rem;
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00d4ff, #7c3aed, #f59e0b);
+  background-size: 200% 100%;
+  animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  color: #00d4ff;
+}
+
+/* ===== RESPONSIVE - Tablets ===== */
+@media screen and (min-width: 768px) {
+  footer {
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-size: 0.9rem;
+  }
+
+  .container {
+    width: auto;
+  }
+}
+
+/* ===== RESPONSIVE - Desktop ===== */
+@media screen and (min-width: 1024px) {
+  footer {
+    padding: 22px 60px;
+    font-size: 1rem;
+  }
+}
